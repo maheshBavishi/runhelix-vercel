@@ -1,0 +1,162 @@
+@use '../../scss/main.scss' as *;
+@use '../../scss/breakpoints/breakpoints.scss' as *;
+
+.footer {
+    background: #000;
+    padding: 50px 0 30px 0;
+
+    @include respond-to("sm") {
+        padding: 40px 0;
+    }
+
+    .copyright {
+        padding: 30px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond-to("sm") {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @include respond-to("sm") {
+            padding: 20px 0 0 0;
+        }
+
+        .towText {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include respond-to("sm") {
+                justify-content: center;
+            }
+
+
+
+
+            a {
+                display: block;
+                cursor: pointer;
+                font-size: 18px;
+                color: #fff;
+                opacity: .8;
+                text-align: center;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                @include respond-to("sm") {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+
+            @include respond-to("sm") {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .footerAlignment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 40px 0;
+        border-bottom: 1px solid rgb(255, 255, 255, .2);
+
+        @include respond-to("sm") {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .socialIconAlignment {
+            display: flex;
+            align-items: center;
+            padding: 40px 0 0 0;
+            gap: 20px;
+
+            img {
+                cursor: pointer;
+                display: block;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .menu {
+
+            @include respond-to("sm") {
+                gap: 20px;
+                justify-content: space-between;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 0 0 20px 0;
+                color: #fff;
+                font-weight: 600;
+            }
+
+            a {
+                display: block;
+                cursor: pointer;
+                color: #FFF;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                padding: 0 0 20px 0;
+                opacity: .8;
+                transition: .3s ease-in-out;
+                line-height: normal;
+
+                @include respond-to("sm") {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .logo {
+            img {
+                display: block;
+                cursor: pointer;
+
+                @include respond-to("sm") {
+                    max-width: 160px;
+                }
+            }
+
+            span {
+                display: block;
+                color: #FFF;
+                font-size: 18px;
+                padding: 16px 0 0 0;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                @include respond-to("sm") {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

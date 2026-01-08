@@ -1,0 +1,110 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.creatorsLove {
+    padding: 90px 0;
+
+    .title {
+        padding: 0 0 60px 0;
+
+        h2 {
+            background: var(--Gradient, linear-gradient(90deg, #29A6B4 0%, #9ED2C3 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-align: center;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+
+        .griditems {
+            border-radius: 24px;
+            padding: 24px;
+            border: 1px solid #9ED2C3;
+            background: linear-gradient(0deg, #E7F3F4 20%, #FFF 100%);
+
+            .cardFooter {
+                display: grid;
+                grid-template-columns: 64px 1fr;
+                padding: 20px 0 0 0;
+                align-items: center;
+                gap: 12px;
+
+                p {
+                    color: #1C1A1E;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: 0 0 5px 0;
+                }
+
+                span {
+                    display: block;
+                    color: #6B7385;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .profile {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    border-radius: 9999px;
+                    background: var(--Black, #4A4A4A);
+                    display: flex;
+                    align-items: center;
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    justify-content: center;
+
+                }
+            }
+
+            .cardbody {
+                padding: 0 0 20px 0;
+                border-bottom: 1px solid #DADADA;
+
+                p {
+                    color: #666;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 26px;
+                }
+            }
+
+            .cardHeader {
+                display: flex;
+                padding: 0 0 20px 0;
+                align-items: center;
+                justify-content: space-between;
+
+                .starIcons {
+                    display: flex;
+                    align-items: center;
+                    gap: 3px;
+
+                    img {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
+}

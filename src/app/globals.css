@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-montserrat);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+button,
+input,
+::placeholder {
+  font-family: var(--font-montserrat);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p:last-child {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-sm {
+  max-width: calc(1296px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-xs {
+  max-width: calc(1296px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-md {
+  max-width: calc(1471px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-lg {
+  max-width: calc(1581px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #29a6b4;
+  border-radius: 3px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #29a6b4 rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile / Lenis helper styles 🔧 */
+html,
+body,
+#__next {
+  -webkit-overflow-scrolling: touch; /* smooth native momentum where applicable */
+}
+
+/* Hardware-accelerate heavy elements to reduce jank during transform-based scrolling */
+img,
+video,
+.container-md,
+.container-lg {
+  will-change: transform, opacity;
+}

@@ -1,0 +1,215 @@
+@use "../../scss/main.scss" as *;
+@use "../../scss/breakpoints/breakpoints.scss" as *;
+
+.headerblur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  width: 100%;
+  mask-image: linear-gradient(rgb(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(40px);
+  pointer-events: none;
+  height: 20px;
+  transform: translateY(-100%);
+  transition: transform 0.45s ease-in-out;
+  will-change: transform;
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+}
+
+.headermain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  padding: 0 0 0 0;
+  transform: translateY(-100%);
+  transition: transform 0.45s ease-in-out;
+  will-change: transform;
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .header {
+    padding: 3px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #11121380;
+    backdrop-filter: blur(6px);
+
+    .headerleft {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .headerlogo {
+      img {
+        max-width: 120px;
+        display: block;
+        cursor: pointer;
+
+        @include respond-to("sm") {
+          max-width: 100px;
+        }
+      }
+
+
+    }
+
+    .mobileMenu {
+      display: none;
+
+      @include respond-to("sm") {
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+
+        path {
+          fill: #29a6b4;
+        }
+      }
+    }
+
+    .headerRight {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .headerlinks {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include respond-to("sm") {
+        display: none;
+      }
+
+      a {
+        cursor: pointer;
+        color: #fff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .loginbutton {
+      @include respond-to("sm") {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      button {
+        color: #fff;
+        cursor: pointer;
+        background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+        border: none;
+        border-radius: 99px;
+        padding: 8px 20px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: normal;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.mobileHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+
+  &.hide {
+    transform: translateX(100%);
+    transition: .3s ease-in-out;
+  }
+
+  &.show {
+    transform: translateX(0%);
+    transition: .3s ease-in-out;
+  }
+
+  .smBody {
+    padding: 80px 20px;
+
+    a {
+      display: block;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 500;
+      padding: 0 0 60px 0;
+    }
+
+    a:last-child {
+      padding: 0;
+    }
+  }
+
+  .smHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255, .1);
+
+    svg {
+      width: 20px;
+      cursor: pointer;
+      height: 20px;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    .headerlogo {
+      img {
+        max-width: 120px;
+        display: block;
+        cursor: pointer;
+
+        @include respond-to("sm") {
+          max-width: 100px;
+        }
+      }
+
+
+    }
+  }
+}

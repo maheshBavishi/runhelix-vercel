@@ -1,0 +1,813 @@
+@use "../../../scss/main.scss" as *;
+@use "../../../scss/breakpoints/breakpoints.scss" as *;
+
+.prompttooutputmain {
+  padding: 30px 0 70px 0;
+
+  @include respond-to("tab") {
+    padding: 51px 0 30px 0;
+  }
+
+  @include respond-to("sm") {
+    padding: 30px 0 30px 0 !important;
+  }
+
+  .btnflx {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    .runbtn {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 28px;
+      border-radius: 99px;
+      border: none;
+      background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+      outline: none;
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: normal;
+      text-align: center;
+      transition: all 0.3s;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .alliconText {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+      padding: 0 0 60px 0;
+
+      .icontext {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+          display: block;
+          color: var(--Black, #4a4a4a);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        img {
+          max-width: 26px;
+        }
+      }
+    }
+  }
+
+  .prompttooutputtopflx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 50px;
+
+    @include respond-to("tab") {
+      display: flex;
+      margin-bottom: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @include respond-to("sm") {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 10px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: normal;
+      text-align: center;
+      background: none;
+      -webkit-text-fill-color: #515151;
+      color: hsla(0, 0%, 32%, 1);
+
+      &.active {
+        background: var(--Gradient,
+            linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%));
+        -webkit-text-fill-color: #0000;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      @include respond-to("md") {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      @include respond-to("tab") {
+        text-align: left;
+
+        &.left {
+          grid-area: 1 / 1 / 2 / 5;
+        }
+
+        &.right {
+          grid-area: 2 / 2 / 3 / 5;
+        }
+      }
+
+      @include respond-to("sm") {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .switchermain {
+      width: 114px;
+      height: 60px;
+      border-radius: 100px;
+      overflow: hidden;
+      background-color: #f8ff9e;
+      padding: 6px;
+
+      @include respond-to("md") {
+        width: 100px;
+        height: 52px;
+      }
+
+      @include respond-to("tab") {
+        grid-area: 2 / 1 / 3 / 2;
+        justify-self: end;
+        width: 73px;
+        height: 36px;
+        padding: 3px;
+      }
+
+      .switcher {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .switcherinner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #000;
+          // transform: none !important;
+          // transition: all 0.4s ease-in-out;
+
+          &.active {
+            left: calc(100% - 50px);
+          }
+
+          @include respond-to("md") {
+            width: 40px;
+            height: 40px;
+
+            &.active {
+              left: calc(100% - 40px);
+            }
+          }
+
+          @include respond-to("tab") {
+            width: 30px;
+            height: 30px;
+
+            &.active {
+              left: calc(100% - 30px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 80px;
+
+    @include respond-to("tab") {
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 100%;
+      margin-bottom: 7px;
+      color: hsla(0, 0%, 32%, 1);
+
+      @include respond-to("md") {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      @include respond-to("tab") {
+        font-size: 28px;
+        line-height: 38px;
+      }
+
+      @include respond-to("sm") {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    p {
+      max-width: 488px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #515151;
+
+      @include respond-to("md") {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      @include respond-to("sm") {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .parralaxcards {
+    // position: sticky;
+    // top: 305px;
+
+    .innerparralaxcardswrapp {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      max-width: 840px;
+      height: 450px;
+      margin: 0 auto;
+
+      @include respond-to("md") {
+        margin: 100px auto 0 auto;
+      }
+
+      @include respond-to("sm") {
+        height: 400px;
+        margin: 60px auto 0 auto;
+      }
+
+      .parralaxcardsimg1,
+      .parralaxcardsimg2,
+      .parralaxcardsimg3,
+      .parralaxcardsimg4,
+      .parralaxcardsimg5,
+      .parralaxcardsimg6,
+      .parralaxcardsimg7 {
+        will-change: transform;
+        transform: translate3d(0px, 0vh, 0px);
+        transform-style: preserve-3d;
+
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 100%;
+          color: #252525;
+          display: block;
+          margin-bottom: 4px;
+
+          @include respond-to("md") {
+            font-size: 14px;
+          }
+
+          @include respond-to("tab") {
+            font-size: 10px;
+          }
+
+          @include respond-to("sm") {
+            font-size: 8px;
+          }
+        }
+
+        .textblock {
+          background-color: #aeb4aa;
+          border-radius: 10px;
+          padding: 5px;
+
+          @include respond-to("md") {
+            padding: 4px;
+            border-radius: 4px;
+          }
+
+          p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 12px;
+            color: #fff;
+
+            @include respond-to("md") {
+              font-size: 10px;
+            }
+
+            @include respond-to("tab") {
+              font-size: 8px;
+            }
+
+            @include respond-to("sm") {
+              font-size: 7px;
+            }
+          }
+        }
+      }
+
+      .parralaxcardsimg1 {
+        grid-area: span 1 / span 4 / span 1 / span 4;
+        max-width: 147px;
+        position: relative;
+        top: 5px;
+        left: 150px;
+
+        @include respond-to("md") {
+          left: 20px;
+        }
+
+        @include respond-to("sm") {
+          left: 0;
+          max-width: 160px;
+          width: 100%;
+        }
+
+        .textblock {
+          @include respond-to("sm") {
+            max-width: 110px;
+            left: 0;
+          }
+        }
+      }
+
+      .parralaxcardsimg2 {
+        grid-area: span 1 / span 4 / span 1 / span 4;
+        justify-self: center;
+        max-width: 173px;
+
+        .textblock {
+          height: auto;
+          margin-bottom: 120px;
+
+          @include respond-to("md") {
+            margin-bottom: 70px;
+          }
+
+          @include respond-to("sm") {
+            max-width: 100px;
+          }
+        }
+      }
+
+      .parralaxcardsimg3 {
+        grid-area: span 1 / span 3 / span 1 / span 4;
+        place-self: center;
+        max-width: 211px;
+
+        .textblock {
+          height: 115px;
+
+          @include respond-to("md") {
+            height: 105px;
+          }
+
+          @include respond-to("sm") {
+            height: 85px;
+          }
+        }
+      }
+
+      .parralaxcardsimg4 {
+        grid-area: span 2 / span 2 / span 1 / span 3;
+        place-self: center start;
+        max-width: 139px;
+
+        span {
+          display: none;
+        }
+
+        .textblock {
+          display: none;
+          height: 212px;
+
+          @include respond-to("md") {
+            height: 162px;
+          }
+
+          @include respond-to("sm") {
+            height: 122px;
+            max-width: 70px;
+          }
+        }
+      }
+
+      .parralaxcardsimg5 {
+        grid-area: span 1 / span 3 / span 1 / span 3;
+        place-self: center start;
+        max-width: 174px;
+        position: relative;
+        bottom: 60px;
+        margin-left: 20px;
+
+        @include respond-to("sm") {
+          left: 60px;
+        }
+
+        .textblock {
+          height: 180px;
+
+          @include respond-to("md") {
+            height: 160px;
+          }
+
+          @include respond-to("sm") {
+            height: 120px;
+            max-width: 70px;
+          }
+        }
+      }
+
+      .parralaxcardsimg6 {
+        grid-area: span 1 / span 3 / span 1 / span 3;
+        place-self: center;
+        max-width: 139px;
+        position: relative;
+        bottom: 70px;
+
+
+
+        @include respond-to("sm") {
+          bottom: 15px;
+          display: none;
+        }
+
+        .textblock {
+          height: 174px;
+
+          @include respond-to("md") {
+            height: 164px;
+          }
+
+          @include respond-to("sm") {
+            height: 124px;
+            max-width: 70px;
+          }
+        }
+      }
+
+      .parralaxcardsimg7 {
+        grid-area: span 1 / span 2 / span 1 / span 3;
+        place-self: start center;
+        max-width: 127px;
+        position: relative;
+        bottom: 40px;
+
+        @include respond-to("md") {
+          left: 40px;
+          top: 20px;
+        }
+
+        @include respond-to("sm") {
+          left: 70%;
+          width: 120px;
+        }
+
+        .textblock {
+          height: auto;
+
+          @include respond-to("sm") {
+            max-width: 120px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .prompttooutputbottomgrdmain {
+      position: absolute;
+      bottom: 7%;
+      left: 0;
+      width: 100%;
+      will-change: transform;
+      transform: translate3d(0px, 50%, 0px);
+      transform-style: preserve-3d;
+      padding-bottom: 20px;
+
+      @include respond-to("md") {
+        bottom: 10%;
+      }
+
+      @include respond-to("sm") {
+        bottom: 30%;
+      }
+
+      .prompttooutputbottomgrd {
+        display: grid;
+        grid-template-columns: 402px 1fr;
+        gap: 8px;
+
+        @include respond-to("md") {
+          grid-template-columns: 280px 1fr;
+        }
+
+        @include respond-to("tab") {
+          grid-template-columns: 200px 1fr;
+        }
+
+        @include respond-to("sm") {
+          grid-template-columns: 150px 1fr;
+        }
+
+        .grditemsleft {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .leftboxfirst {
+            background-color: #eaeadb;
+            border-radius: 18px;
+            overflow: hidden;
+
+            .boxheader {
+              padding: 18px 15px;
+              border-radius: 18px 18px 0 0;
+              background-color: #f8ff9e;
+
+              @include respond-to("md") {
+                padding: 12px;
+              }
+
+              @include respond-to("sm") {
+                padding: 5px 15px;
+              }
+
+              span {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 100%;
+                color: #252525;
+
+                @include respond-to("md") {
+                  font-size: 20px;
+                }
+
+                @include respond-to("tab") {
+                  font-size: 16px;
+                }
+
+                @include respond-to("sm") {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .boxbody {
+              padding: 15px 15px 48px;
+
+              @include respond-to("md") {
+                padding: 12px;
+              }
+
+              @include respond-to("sm") {
+                padding: 10px;
+              }
+
+              p {
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 24px;
+                color: #252525;
+
+                @include respond-to("md") {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+
+                @include respond-to("tab") {
+                  font-size: 10px;
+                  line-height: 13px;
+                }
+
+                @include respond-to("sm") {
+                  font-size: 7px;
+                  line-height: 10px;
+                }
+              }
+            }
+          }
+
+          // .leftboxsecond {
+          //   height: 147px;
+          //   display: flex;
+          //   flex-direction: column;
+          //   justify-content: center;
+          //   align-items: center;
+
+          //   @include respond-to("md") {
+          //     height: 130px !important;
+          //   }
+
+          //   @include respond-to("tab") {
+          //     height: 120px !important;
+          //   }
+
+          //   @include respond-to("sm") {
+          //     height: 110px !important;
+          //   }
+
+          //   .leftboxsecondbox {
+          //     width: 100%;
+          //     height: 0;
+          //     overflow: hidden;
+          //     // height: 100%;
+          //     background-color: #fff;
+          //     border-radius: 18px;
+          //     display: flex;
+          //     justify-content: center;
+          //     align-items: center;
+
+          //     &.active {
+          //       height: 100%;
+          //     }
+
+          //     span {
+          //       font-size: 24px;
+          //       font-weight: 500;
+          //       line-height: 100%;
+          //       color: #252525;
+          //     }
+          //   }
+          // }
+        }
+
+        .grditemsright {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-start;
+
+          .rightboxfirst {
+            width: 402px;
+            // width: 100%;
+            height: 100%;
+            // height: calc(100% - 155px);
+            background-color: #eaeadb;
+            border-radius: 18px;
+            overflow: hidden;
+            // background-image: url("../../../../public/assets/images/outputimage.png");
+            // background-size: cover;
+            transition: 0.4s ease-in-out;
+            position: relative;
+
+            @include respond-to("md") {
+              // height: calc(100% - 138px);
+              width: 280px;
+            }
+
+            @include respond-to("tab") {
+              // height: calc(100% - 128px);
+              width: 200px;
+            }
+
+            @include respond-to("sm") {
+              width: 150px;
+              // height: calc(100% - 118px);
+            }
+
+            &.active {
+              width: 100%;
+              height: 100%;
+            }
+
+            video {
+              width: 100%;
+              height: calc(100% - 20px);
+              object-fit: cover;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              z-index: 1;
+            }
+
+            .boxheader {
+              padding: 18px 15px;
+              border-radius: 17px 17px 0 0;
+              background-color: #f8ff9e;
+              position: relative;
+              z-index: 2;
+
+              @include respond-to("md") {
+                padding: 12px;
+              }
+
+              @include respond-to("sm") {
+                padding: 5px 15px;
+              }
+
+              span {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 100%;
+                color: #252525;
+
+                @include respond-to("md") {
+                  font-size: 20px;
+                }
+
+                @include respond-to("tab") {
+                  font-size: 16px;
+                }
+
+                @include respond-to("sm") {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            // .boxbody {
+            //   height: 327px;
+            //   // height: 482px;
+
+            //   img {
+            //     width: 100%;
+            //     height: 100%;
+            //     object-position: bottom;
+            //     object-fit: cover;
+            //   }
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  .modelslistmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+
+    @include respond-to("md") {
+      margin-top: 0;
+    }
+
+    @include respond-to("sm") {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 0px;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 100%;
+      text-align: center;
+      color: hsla(0, 0%, 32%, 1);
+
+      @include respond-to("sm") {
+        font-size: 14px;
+      }
+    }
+
+    .modelsflx {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      @include respond-to("sm") {
+        gap: 14px;
+      }
+
+      img {
+        width: 50px;
+        height: 50%;
+
+        @include respond-to("sm") {
+          max-width: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

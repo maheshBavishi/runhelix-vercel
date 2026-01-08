@@ -1,0 +1,275 @@
+@use "../../../scss/main.scss" as *;
+@use "../../../scss/breakpoints/breakpoints.scss" as *;
+
+.simplepricingmain {
+  padding: 100px 0;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 62px;
+      font-weight: 500;
+      line-height: 70px;
+      text-align: center;
+      background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 50px;
+    }
+
+    .togglechip {
+      display: flex;
+      align-items: center;
+      border: 1px solid #181818cc;
+      border-radius: 16px;
+
+      .togglechileft {
+        padding: 21px 30px;
+
+        p {
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 100%;
+          color: #181818cc;
+        }
+      }
+
+      .togglechiright {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 25px;
+        background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+        border-radius: 16px;
+        margin: -1px -1px -1px 0;
+
+        p {
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 100%;
+          color: #ffffff;
+        }
+
+        .savebtn {
+          padding: 7px 10px;
+          border-radius: 50px;
+          background-color: #fff;
+
+          span {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 100%;
+            background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+
+    .titlepera {
+      margin: 50px 0 60px 0;
+
+      p {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    padding: 0 24px;
+
+    .griditemsmain {
+      background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+      border-radius: 18px;
+      padding: 1px;
+
+      .griditems,
+      .griditemssc {
+        height: 100%;
+        background-color: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 88px 1fr;
+
+        .ticket {
+          padding: 28px;
+          width: 100%;
+          background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+          text-align: center;
+
+          span {
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 100%;
+            color: #ffffff;
+          }
+        }
+
+        .griditemsbody {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 40px;
+          height: 100%;
+          padding: 40px 35px;
+
+          .griditemsbodytext {
+            text-align: center;
+
+            p {
+              font-size: 25px;
+              font-weight: 400;
+              line-height: 28px;
+              color: #515151;
+              margin-bottom: 40px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              span {
+                background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+                -webkit-text-fill-color: #0000;
+                -webkit-background-clip: text;
+                background-clip: text;
+                display: block;
+
+                &.underlined {}
+              }
+
+              &.underlined {}
+            }
+
+            h6 {
+              margin-top: 40px;
+              font-size: 36px;
+              font-weight: 400;
+              line-height: 100%;
+              color: #515151;
+            }
+          }
+
+          .subscribebtn {
+            width: 100%;
+            padding: 18px;
+            text-align: center;
+            background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+            border-radius: 14px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 100%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin: 0 2.5px;
+          }
+        }
+      }
+
+      .griditemssc {
+        display: block !important;
+      }
+    }
+  }
+
+  .pricingbottommain {
+    padding: 0 24px;
+
+    .pricingbottom {
+      background-color: #fff;
+      border-radius: 18px;
+
+      .pricingbottomtopbox {
+        margin-top: 36px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid #ffffff26;
+
+        h6 {
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 100%;
+          color: #515151;
+          margin-bottom: 40px;
+        }
+
+        p {
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 38px;
+          color: #515151;
+          margin-bottom: 40px;
+        }
+
+        .contactbtn {
+          background: linear-gradient(90deg, #29a6b4 0%, #9ed2c3 100%);
+          border-radius: 14px;
+          border: none;
+          outline: none;
+          color: #fff;
+          padding: 18px 40px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 100%;
+          margin-bottom: 50px;
+        }
+      }
+
+      .pricingbottombottombox {
+        padding: 50px;
+
+        .litsttitle {
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 100%;
+          color: #515151;
+          margin-bottom: 30px;
+        }
+
+        ul {
+          margin: 0;
+
+          li {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
+            color: #515151;
+            margin-bottom: 18px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .instantly {
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 100%;
+          color: #515151;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

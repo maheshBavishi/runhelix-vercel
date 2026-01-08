@@ -1,0 +1,48 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.galleryView {
+    overflow-x: hidden;
+    padding: 90px 0 0 0;
+
+    .masonryWrapper {
+        column-count: 4;
+        column-gap: 4px;
+
+        @media (max-width: 1400px) {
+            column-count: 5;
+        }
+
+        @media (max-width: 1200px) {
+            column-count: 4;
+        }
+
+        @media (max-width: 992px) {
+            column-count: 3;
+        }
+
+        @media (max-width: 576px) {
+            column-count: 2;
+        }
+    }
+
+    .masonryItem {
+        break-inside: avoid;
+        margin-bottom: 4px;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+
+        img {
+            display: block;
+        }
+
+
+    }
+}

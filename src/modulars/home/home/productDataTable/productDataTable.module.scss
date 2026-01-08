@@ -1,0 +1,85 @@
+@use '../../../scss/main.scss' as *;
+@use '../../../scss/breakpoints/breakpoints.scss' as *;
+
+.productDataTable {
+    padding: 100px 0;
+    background: #181818;
+
+    .title {
+        padding: 0 0 60px 0;
+
+        h2 {
+            background: var(--Gradient, linear-gradient(90deg, #29A6B4 0%, #9ED2C3 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-align: center;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+
+    .tableUi {
+        width: 100%;
+        overflow: auto;
+        border-radius: 18px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 18px;
+        background: #080808;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            tbody {
+                tr:last-child {
+                    border: none;
+                }
+
+                tr {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+                    td:last-child {
+                        border: none;
+                    }
+
+
+
+                    td {
+                        color: rgba(255, 255, 255, 0.7);
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        text-align: left;
+                        border-right: 1px solid rgba(255, 255, 255, 0.15);
+                        padding: 18px;
+                    }
+                }
+            }
+
+            thead {
+                tr {
+                    background: var(--Gradient, linear-gradient(90deg, #29A6B4 0%, #9ED2C3 100%));
+                    border-top-left-radius: 18px;
+                    border-top-right-radius: 18px;
+
+                    th {
+                        padding: 18px;
+                        color: #FFF;
+                        text-align: center;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+
+
+                    }
+                }
+            }
+        }
+    }
+}
